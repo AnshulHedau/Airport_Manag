@@ -27,7 +27,7 @@
 	      .form-signin {
 	        max-width: 300px;
 	        padding: 19px 29px 29px;
-	        margin: 0 auto 20px;
+	        margin: 20px auto 20px;
 	        background-color: #fff;
 	        border: 1px solid #e5e5e5;
 	        -webkit-border-radius: 5px;
@@ -54,6 +54,7 @@
    
    <body>
       <?php
+	  include('style.php');
          if(isset($_POST['add'])) {
             include('db_login.php');
             $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
@@ -80,8 +81,7 @@
                die('Could not enter data: ' . mysqli_error($conn));
             }
             if ($retval->num_rows > 0) {
-            echo "Entered RETRIEVED successfully\n";
-
+            
             while($row = mysqli_fetch_array($retval, MYSQL_ASSOC))
 			{
 				$Flight_ID = $row['FLIGHT_ID'];
@@ -94,8 +94,8 @@
 				$Arrival_Time = $row['ARRIVAL_TIME'];
 				$Airlines_Name = $row['Airlines_Name'];
 
-					echo "  <div class='row'>
-								<div class='col-md-10 col-md-offset-1' style='text-align:center;padding: 10px 0px;font-size:16px;border-style:solid;border-width:1px;background-color:#a864a8';>
+					echo "  <br /><div class='row'>
+								<div class='col-md-10 col-md-offset-1' style='text-align:center;padding: 10px 0px;font-size:16px;border-style:solid;border-width:1px;background-color:#676161';>
 									<h2>WELCOME $pass_name</h2>
 									<h3> PNR NUMBER $pnr_number</h3>
 									<br />
@@ -126,7 +126,7 @@
 						}
 				else {
 					?>
-					Invalid input<br>
+					<h2>No Details Found....</h2><br>
 					<?php
 				}
             mysqli_close($conn);

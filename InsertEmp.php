@@ -21,7 +21,16 @@ else{
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
 		<style type="text/css">
-	      body {
+	     body {
+	        background-image:url("AirporT1.png");
+		background-repeat:no repeat;
+		background-position:left top;
+		background-size:cover;
+		background-attachment:   fixed  ;
+		color:white;
+		
+		text-align:center;
+		font-family:Roboto;
 	        padding-top: 0px;
 	        padding-bottom: 40px;
 	        background-color: #f5f5f5;
@@ -30,7 +39,7 @@ else{
 	      .form-signin {
 	        max-width: 300px;
 	        padding: 19px 29px 29px;
-	        margin: 0 auto 20px;
+			margin: 80px auto 20px;
 	        background-color: #fff;
 	        border: 1px solid #e5e5e5;
 	        -webkit-border-radius: 5px;
@@ -57,7 +66,7 @@ else{
    
    <body>
       <?php
-          
+          include('style.php');
          if(isset($_POST['add'])) {
             include('Admin_info.php');
 			include('db_login.php');
@@ -139,21 +148,20 @@ else{
 
 			?>
 			<div class="container">
-				<div class="row well">
-				
-					<form class="form-signin" method = "post" action = "<?php $_PHP_SELF ?>">
+				<form class="form-signin" method = "post" action = "<?php $_PHP_SELF ?>">
 						<center>
-							<input type='text' id = "Name" name='Name'/ placeholder="Employee Name" required><br />
+						<h3> Insert Employee </h3><br />
+							<input type='text' id = "Name" name='Name' placeholder="Employee Name" required><br />
 						<br/>
-							<input name = "password" type = "text" id = "password"/ placeholder="Employee Phone Number" required><br />
-							
-							<input type='text' id = "Name1" name='Name1'/ placeholder="Employee's Sex" required><br />
+							<input name = "password" type = "text" id = "password" placeholder="Employee Phone Number" required><br />
+						<br />
+							<input type='text' id = "Name1" name='Name1' placeholder="Employee's Sex" required><br />
 						<br/>
-						<input type='text' id = "Name2" name='Name2'/ placeholder="Employee's Age" required><br />
+						<input type='text' id = "Name2" name='Name2' placeholder="Employee's Age" required><br />
 						<br/>
-						<input type='text' id = "Name3" name='Name3'/ placeholder="Employee's Shift" required><br />
+						<input type='text' id = "Name3" name='Name3' placeholder="Employee's Shift" required><br />
 						<br/>
-						<input type='text' id = "Name4" name='Name4'/ placeholder="Employee's Id" required><br />
+						<input type='text' id = "Name4" name='Name4' placeholder="Employee's Id" required><br />
 						<br/>
 	
 							<button id = "add" name = "add" type="submit" class="btn btn-info">
@@ -165,8 +173,6 @@ else{
 							
 						</center>
 					</form>
-				
-				</div>
 			</div>
 			<script type="text/javascript" src="js/bootstrap.js"></script>
 		

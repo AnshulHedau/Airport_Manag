@@ -57,7 +57,7 @@ else{
    
    <body>
       <?php
-          
+        include('style.php');
          if(isset($_POST['add'])) {
             include('Admin_info.php');
 			include('db_login.php');
@@ -93,9 +93,9 @@ else{
 				
 					<form class="form-signin" method = "post" action = "<?php $_PHP_SELF ?>">
 						<center>
-							<input type='text' id = "Name" name='Name'/ placeholder="Airline Name to Delete" required><br />
+							<input type='text' id = "Name" name='Name' placeholder="Airline Name to Delete" required><br />
 						<br/>
-							<input name = "password" type = "text" id = "password"/ placeholder="Flight ID" required><br />
+							<input name = "password" type = "text" id = "password" placeholder="Flight ID" required><br />
 							<br><br>
 							<button id = "add" name = "add" type="submit" class="btn btn-info">
 								<i class="icon-ok icon-white"></i> Submit

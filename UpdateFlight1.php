@@ -58,7 +58,7 @@ else{
    
    <body>
       <?php
-         
+         include('style.php');
         if(isset($_POST['add1'])) {
             
 			include('Admin_info.php');

@@ -22,6 +22,16 @@ else{
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
 		<style type="text/css">
 	      body {
+			  
+			  background-image:url("AirporT1.png");
+		background-repeat:no repeat;
+		background-position:left top;
+		background-size:cover;
+		background-attachment:   fixed  ;
+		color:white;
+		
+		text-align:center;
+		font-family:Roboto;
 	        padding-top: 0px;
 	        padding-bottom: 40px;
 	        background-color: #f5f5f5;
@@ -30,7 +40,7 @@ else{
 	      .form-signin {
 	        max-width: 300px;
 	        padding: 19px 29px 29px;
-	        margin: 0 auto 20px;
+	        margin: 80px auto 20px;
 	        background-color: #fff;
 	        border: 1px solid #e5e5e5;
 	        -webkit-border-radius: 5px;
@@ -57,7 +67,7 @@ else{
    
    <body>
       <?php
-          
+          include('style.php');
          if(isset($_POST['add'])) {
             include('Admin_info.php');
 			include('db_login.php');
@@ -122,13 +132,13 @@ else{
 
 			?>
 			<div class="container">
-				<div class="row well">
+				
 				
 					<form class="form-signin" method = "post" action = "<?php $_PHP_SELF ?>">
 						<center>
-							<input type='text' id = "Name" name='Name'/ placeholder="Correct Employee Name" required><br />
+							<input type='text' id = "Name" name='Name' placeholder="Correct Employee Name" required><br />
 						<br/>
-							<input name = "password" type = "text" id = "password"/ placeholder="Employee ID" required><br />
+							<input name = "password" type = "text" id = "password" placeholder="Employee ID" required><br />
 							<br><br>
 							<button id = "add" name = "add" type="submit" class="btn btn-info">
 								<i class="icon-ok icon-white"></i> Submit
@@ -140,7 +150,7 @@ else{
 						</center>
 					</form>
 				
-				</div>
+
 			</div>
 			<script type="text/javascript" src="js/bootstrap.js"></script>
 		

@@ -57,7 +57,7 @@ else{
    
    <body>
       <?php
-          
+          include('style.php');
          if(isset($_POST['add'])) {
             include('Admin_info.php');
 			include('db_login.php');

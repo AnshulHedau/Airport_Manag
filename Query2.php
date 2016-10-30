@@ -9,10 +9,51 @@ else{
 	$Pass=$_SESSION['password'];
 }
 ?>
+
+
 <html>
    
+   
    <head>
-      <title>Add New Record in MySQL Database</title>
+   <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cargo Details</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+		<style type="text/css">
+	      body {
+	        padding-top: 40px;
+	        padding-bottom: 40px;
+	        background-color: #f5f5f5;
+			color:black;
+	      }
+
+	      .form-signin {
+	        max-width: 300px;
+	        padding: 19px 29px 29px;
+	        margin: 0 auto 20px;
+	        background-color: #fff;
+	        border: 1px solid #e5e5e5;
+	        -webkit-border-radius: 5px;
+	           -moz-border-radius: 5px;
+	                border-radius: 5px;
+	        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	      }
+	      .form-signin .form-signin-heading,
+	      .form-signin .checkbox {
+	        margin-bottom: 10px;
+	      }
+	      .form-signin input[type="text"],
+	      .form-signin input[type="password"] {
+	        font-size: 16px;
+	        height: auto;
+	        margin-bottom: 15px;
+	        padding: 7px 9px;
+	      }
+
+	    </style>
    </head>
    
    <body>
@@ -88,37 +129,29 @@ else{
 
             ?>
             
-               <form method = "post" action = "<?php $_PHP_SELF ?>">
-                  <table width = "400" border = "0" cellspacing = "1" 
-                     cellpadding = "2">
-                  
-                     <tr>
-                        <td width = "100">Airport Code</td>
-                        <td><input name = "Code" type = "text" 
-                           id = "Code"></td>
-                     </tr>
-                  
-                     <tr>
-                        <td width = "100">Flight ID</td>
-                        <td><input name = "id" type = "text" 
-                           id = "id"></td>
-                     </tr>
-                  
-                     <tr>
-                        <td width = "100"> </td>
-                        <td> </td>
-                     </tr>
-                  
-                     <tr>
-                        <td width = "100"> </td>
-                        <td>
-                           <input name = "add" type = "submit" id = "add" 
-                              value = "Search">
-                        </td>
-                     </tr>
-                  
-                  </table>
-               </form>
+			
+			<div class="container">
+				<div class="row well">
+				
+					<form class="form-signin" method = "post" action = "<?php $_PHP_SELF ?>">
+						<center>
+						<h2> CARGO DETAILS </h2>
+						<br />
+						<br />
+						<input type='text' id = "Code" name='Code' placeholder="Airport Code" required><br />
+						<br/>
+						<input type='text' id = "id" name='id' placeholder="Flight Id" required><br />
+						<br/>
+						<button id = "add" name = "add" type="submit" class="btn btn-info">
+							<i class="icon-ok icon-white"></i> Submit
+						</button>
+						<button type="reset" class="btn">
+							<i class="icon-refresh icon-black"></i> Clear
+						</button>
+               
+			   </form>
+			   </div>
+			   </div>
             <?php
          }
       ?>

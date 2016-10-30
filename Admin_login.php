@@ -10,14 +10,20 @@
 		<style type="text/css">
 	      body {
 	        padding-top: 40px;
-	        padding-bottom: 40px;
-	        background-color: #f5f5f5;
+	        padding-bottom: 40px; 
+			background-image:url("AirporT1.png");
+			background-repeat:no repeat;
+			background-position:left top;
+			background-size:cover;
+			background-attachment:   fixed  ;
+			text-align:center;
+			font-family:Roboto;
 	      }
 
 	      .form-signin {
 	        max-width: 300px;
 	        padding: 19px 29px 29px;
-	        margin: 0 auto 20px;
+	        margin: 20px auto 20px;
 	        background-color: #fff;
 	        border: 1px solid #e5e5e5;
 	        -webkit-border-radius: 5px;
@@ -43,7 +49,7 @@
 	</head>
 	
 	<body>
-	
+	<?php include('style.php');?>
 	<div class="container">
 			<form class="form-signin" method='post'  action='login_check.php'>
 				<center>
