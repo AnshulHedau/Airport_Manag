@@ -19,6 +19,15 @@ else{
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
 		<style type="text/css">
 	      body {
+	        background-image:url("AirporT1.png");
+		background-repeat:no repeat;
+		background-position:left top;
+		background-size:cover;
+		background-attachment:   fixed  ;
+		color:black;
+		
+		text-align:center;
+		font-family:Roboto;
 	        padding-top: 0px;
 	        padding-bottom: 40px;
 	        background-color: #f5f5f5;
@@ -27,7 +36,7 @@ else{
 	      .form-signin {
 	        max-width: 300px;
 	        padding: 19px 29px 29px;
-	        margin: 0 auto 20px;
+			margin: 80px auto 20px;
 	        background-color: #fff;
 	        border: 1px solid #e5e5e5;
 	        -webkit-border-radius: 5px;
@@ -116,16 +125,17 @@ else{
          }
 		 else {
             
-
+			   include('style.php');
             ?>
 			
 			
 			
 			<div class="container">
-				<div class="row well">
-				
-					<form class="form-signin" method = "post" action = "<?php $_PHP_SELF ?>">
+				<form class="form-signin" method = "post" action = "<?php $_PHP_SELF ?>">
 						<center>
+							<h3> Employee Search </h3>
+							<br />
+							<br />
 							<input type='text' id = "emp_name" name='emp_name'/ placeholder="Employee - Name" required><br />
 						<br/>
 							<input name = "emp_id" type = "text" id = "emp_id"/ placeholder="Employee - ID" required><br />
@@ -140,7 +150,6 @@ else{
 						</center>
 					</form>
 				
-				</div>
 			</div>
 			<script type="text/javascript" src="js/bootstrap.js"></script>
 		

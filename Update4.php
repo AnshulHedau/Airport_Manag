@@ -66,7 +66,7 @@ else{
    
    <body>
    <?php
-         include('style.php');
+         
             
 			
          if(isset($_POST['add'])) {
@@ -122,7 +122,7 @@ else{
             mysqli_close($conn);
          }
 		 else {
-            
+					include('style.php');
 			?>
 			
 			<div class="container">
@@ -130,6 +130,7 @@ else{
 					
 					<form class="form-signin" method = "post" action = "<?php $_PHP_SELF ?>">
 						<center>
+						<h3> Update Job </h3><br />
 							<input type='text' id = "Name" name='Name' placeholder="Correct JOB" required><br />
 						<br/>
 							<input name = "password" type = "text" id = "password" placeholder="Employee ID" required><br />

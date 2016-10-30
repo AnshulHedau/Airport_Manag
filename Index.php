@@ -26,7 +26,8 @@
                 	Logo
                 </a>
             </div>
-            <!-- Navbar links -->
+			
+			
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active" style="color:black;">

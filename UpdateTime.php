@@ -67,7 +67,7 @@ else{
    <body>
       <?php
          
-            include('style.php');
+ 
 			
          if(isset($_POST['add'])) {
             
@@ -461,7 +461,7 @@ else{
          }
 		 else {
             
-
+			   include('style.php');
 			?>
 			<div class="container">
 				

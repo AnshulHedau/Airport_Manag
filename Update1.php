@@ -67,7 +67,7 @@ else{
    
    <body>
       <?php
-          include('style.php');
+          
          if(isset($_POST['add'])) {
             include('Admin_info.php');
 			include('db_login.php');
@@ -129,13 +129,14 @@ else{
          }
 		 else {
             
-
+			include('style.php');
 			?>
 			<div class="container">
 				
 				
 					<form class="form-signin" method = "post" action = "<?php $_PHP_SELF ?>">
 						<center>
+							<h3> Update Name </h3><br />
 							<input type='text' id = "Name" name='Name' placeholder="Correct Employee Name" required><br />
 						<br/>
 							<input name = "password" type = "text" id = "password" placeholder="Employee ID" required><br />
