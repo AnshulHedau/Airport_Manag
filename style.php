@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Business 2</title>
+    <title>Index</title>
 
     <link href="css/bootstrap.min2.css" rel="stylesheet">
 
@@ -25,7 +25,7 @@
             <div class="navbar-header">
                 
                 <a class="navbar-brand" style="color:black;" href="#">
-                	Logo
+                	DBMS Project
                 </a>
             </div>
             

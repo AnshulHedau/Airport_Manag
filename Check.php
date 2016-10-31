@@ -95,7 +95,7 @@
 				$Airlines_Name = $row['Airlines_Name'];
 
 					echo "  <br /><div class='row'>
-								<div class='col-md-10 col-md-offset-1' style='text-align:center;padding: 10px 0px;font-size:16px;border-style:solid;border-width:1px;background-color:#676161';>
+								<div class='col-md-10 col-md-offset-1' style='text-align:center;padding: 10px 0px;font-size:16px;border-style:solid;border-width:1px;background-color:#878383';>
 									<h2>WELCOME $pass_name</h2>
 									<h3> PNR NUMBER $pnr_number</h3>
 									<br />
