@@ -93,8 +93,44 @@ else{
                
             $retval =  mysqli_query( $conn , $sql);
             if ($retval->num_rows > 0) {
-
-				echo "Entered RETRIEVED successfully<br />";
+				
+				
+				echo "<div class='table table-striped' style='margin:30px 0px;color:black;'>
+					<h2>Employee Details</h2>
+					<div class='container'>  	
+						<div class='row'>
+	    					<h3><div class='col-sm-2 col-sm-offset-1'>
+								Name<br />
+							</div>
+							<div class='col-sm-2'>
+								Phone<br />
+							</div>
+							<div class='col-sm-1'>
+								Sex<br />
+							</div>
+							<div class='col-sm-1'>
+								Age<br />
+							</div>
+							<div class='col-sm-1'>
+								Shift<br />
+							</div>
+							<div class='col-sm-2'>
+								Id<br />
+							
+							</div>
+							<div class='col-sm-1'>
+								Authority<br  />
+							</div></h3>
+					
+						</div>
+					</div>
+					
+				</div>"
+				
+				
+				
+				;
+				
 				while($row = mysqli_fetch_array($retval, MYSQL_ASSOC))
 				{
 					$NAME = $row['Name'];
@@ -107,16 +143,37 @@ else{
 				
 
 
-				echo "  <div style='margin:30px 0px;'>
-				Name: $NAME<br />
-				Phone: $PHONE<br />
-				Sex: $SEX<br />
-				Age $AGE<br />
-				Shift: $SHIFT<br />
-				Id: $ID<br />
-				Authority : $AUTHORITY<br />
+				echo " <div class='table table-striped' style='margin:30px 0px; color:black;'>
+					<div class='container'>  	
+						<div class='row'>
+	    					<div class='col-sm-2 col-sm-offset-1'>
+								$NAME<br />
+							</div>
+							<div class='col-sm-2'>
+								$PHONE<br />
+							</div>
+							<div class='col-sm-1'>
+								$SEX<br />
+							</div>
+							<div class='col-sm-1'>
+								$AGE<br />
+							</div>
+							<div class='col-sm-1'>
+								$SHIFT<br />	
+								
+							</div>
+							<div class='col-sm-2'>
+								$ID<br />
+							
+							</div>
+							<div class='col-sm-1'>
+								$AUTHORITY<br/>
+							</div>
+						</div>
+					</div>
 				</div>
 				";
+
 
 				}
 						}
