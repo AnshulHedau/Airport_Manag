@@ -93,7 +93,54 @@ else{
             }
             if ($retval->num_rows > 0) {
             
-            echo "Entered RETRIEVED successfully\n";
+			
+			echo "
+				
+				<center>
+				<div class='table table-striped' style='margin:30px 0px; color:black;'>
+				
+				
+				<h2>Cargo Details</h2>
+					<div class='container'>  	
+						<div class='row'>
+	    				<h4>	<div class='col-sm-1 col-sm-offset-1'>
+								Flight ID<br />
+							</div>
+							<div class='col-sm-1'>
+								From Airport<br />
+							</div>
+							<div class='col-sm-1'>
+								To Airport<br />
+							</div>
+							
+							
+							<div class='col-sm-2'>
+								Dept Date<br />	
+								
+							</div>
+							<div class='col-sm-1'>
+								Dept Time<br />
+							
+							</div>
+							<div class='col-sm-2'>
+								Arrival Date<br/>
+							</div>
+							
+							<div class='col-sm-1'>
+								Airlines Name<br/>
+							</div>
+							<div class='col-sm-1'>
+								Capacity<br/>
+							</div>
+							
+							</h4>
+						</div>
+					</div>
+				</div>
+				</center>
+				";
+				
+				
 
             while($row = mysqli_fetch_array($retval, MYSQL_ASSOC))
 			{
@@ -109,25 +156,52 @@ else{
 				$Capacity = $row['CAPACITY'];
 
 
-				echo "  <div style='margin:30px 0px;'>
-				Flight_ID: $Flight_ID<br />
-				From_Airport: $From_Airport<br />
-				To_Airport: $To_Airport<br />
-				Baggage_Counter: $Baggage_Counter<br />
-				Dept_Date: $Dept_Date<br />
-				Dept_Time: $Dept_Time<br />
-				Arrival_Date: $Arrival_Date<br />
-				Arrival_Time : $Arrival_Time<br />
-				Airlines_Name : $Airlines_Name<br />
-				Capacity : $Capacity<br />
+				echo "
+				
+				
+				<div class='table table-striped' style='margin:30px 0px; color:black;'>
+					<div class='container'>  	
+						<div class='row'>
+	    					<div class='col-sm-1 col-sm-offset-1'>
+								$Flight_ID<br />
+							</div>
+							<div class='col-sm-1'>
+								$From_Airport<br />
+							</div>
+							<div class='col-sm-1'>
+								$To_Airport<br />
+							</div>
+							
+							
+							<div class='col-sm-2'>
+								$Dept_Date<br />	
+								
+							</div>
+							<div class='col-sm-1'>
+								$Dept_Time<br />
+							
+							</div>
+							<div class='col-sm-2'>
+								$Arrival_Date<br/>
+							</div>
+							
+							<div class='col-sm-1'>
+								$Airlines_Name<br/>
+							</div>
+							<div class='col-sm-1'>
+								$Capacity<br/>
+							</div>
+						</div>
+					</div>
 				</div>
 				";
+
 
 			}
 						}
 				else {
 					?>
-					Invalid input<br>
+					<h3>No such Cargo Flight Found.</h3><br>
 					<?php
 				}
 			mysqli_close($conn);

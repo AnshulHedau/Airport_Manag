@@ -23,7 +23,7 @@
             <div class="navbar-header">
                 
                 <a class="navbar-brand" style="color:black;" href="#">
-                	Logo
+                	DBMS Project
                 </a>
             </div>
 			
@@ -39,14 +39,14 @@
             </div>
         </div>
     </nav>
-
-	<!-- Header -->
+	
+	
     <header>
         <div class="header-content">
             <div class="header-content-inner" style="color:black;">
                 <h1>Airport Management</h1>
-                <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
-                <a href="check.php" class="btn btn-primary btn-lg">Check PNR</a>
+                
+				<a href="check.php" class="btn btn-primary btn-lg">Check PNR</a>
             </div>
         </div>
     </header>
