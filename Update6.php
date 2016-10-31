@@ -92,7 +92,7 @@ else{
             $retval =  mysqli_query( $conn , $sql);
             if ($retval->num_rows > 0) {
 
-				echo "<h2> Airport Details</h2>";
+				echo "<h1 style='color:black'> Airport Details</h1>";
 				while($row = mysqli_fetch_array($retval, MYSQL_ASSOC))
 				{
 					$NAME = $row['NAME'];
@@ -141,7 +141,7 @@ else{
 						<center>
 						
 								<h3>      Update No. of Terminals </h3><br     />
-							<input type='text' id = "Name" name='Name' pattern="{1}" placeholder="No. of Terminals" required><br />
+							<input type='Number' id = "Name" name='Name' min="1" max="10" pattern="{1}" placeholder="No. of Terminals" required><br />
 						<br/>
 							
 							<button id = "add" name = "add" type="submit" class="btn btn-info">

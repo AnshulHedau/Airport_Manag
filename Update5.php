@@ -86,13 +86,12 @@ else{
 			$sql1 = "UPDATE `tutorial`.`AIRPORTS` SET `No._OF_RUNWAYS`='$Code' WHERE `AIRPORT_CODE`=(select AIRPORT_CODE from admins where Admin='$User' and Password='$Pass');";
             mysqli_select_db( $conn,'test_db');
             $retval1 =  mysqli_query( $conn , $sql1);
-				
 			$sql = "SELECT *FROM AIRPORTS WHERE AIRPORT_CODE=(SELECT AIRPORT_CODE FROM ADMINS WHERE ADMIN='$User' AND PASSWORD='$Pass');";
                
             $retval =  mysqli_query( $conn , $sql);
             if ($retval->num_rows > 0) {
 
-				echo "<h2> Airport Details</h2>";
+				echo "<h1 style='color:black'> Airport Details</h1>";
 				while($row = mysqli_fetch_array($retval, MYSQL_ASSOC))
 				{
 					$NAME = $row['NAME'];
@@ -140,7 +139,7 @@ else{
 				<form class="form-signin" method = "post" action = "<?php $_PHP_SELF ?>">
 						<center>
 						<h3> Update No. of Runways </h3><br />
-							<input type='text' id = "Name" name='Name'/ placeholder="No. of RumwayS" required><br />
+							<input type='Number' id = "Name" name='Name' min="1" max="10" placeholder="No. of Runways" required><br />
 						<br/>
 							
 							<button id = "add" name = "add" type="submit" class="btn btn-info">

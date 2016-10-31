@@ -37,7 +37,7 @@ else{
             $retval =  mysqli_query( $conn , $sql);
             if ($retval->num_rows > 0) {
 
-				echo "<h2> Airport Details</h2>";
+				echo "<h1 style='color:black'> Airport Details</h1>";
 				while($row = mysqli_fetch_array($retval, MYSQL_ASSOC))
 				{
 					$NAME = $row['NAME'];

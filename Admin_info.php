@@ -63,7 +63,7 @@ else{
 					$EMAIL_ID= $row['EMAIL_ID'];
 					
 					echo "  <div class='row'>
-								<div class='col-md-10 col-md-offset-1' style='text-align:center;padding: 10px 0px;font-size:16px;border-style:solid;border-width:1px;background-color:#676161';>
+								<div class='col-md-10 col-md-offset-1' style='text-align:center;padding: 10px 0px;font-size:16px;border-style:solid;border-width:1px;background-color:#878383'>
 									<h2>Welcome $NAME</h2>
 									<div class='row'>
 										<div class='col-md-5 col-md-offset-1' style='text-align:left;'>
@@ -73,7 +73,7 @@ else{
 										<div class='col-md-5' style='text-align:right;'>
 											<div class='airport' style:'float:right'>Age: $AGE<br />
 											MOBILE_NUMBER: $MOBILE_NUMBER<br />
-											MAIL_ID: $EMAIL_ID<br /></div>
+											EMAIL_ID: $EMAIL_ID<br /></div>
 											</div>
 										</div>
 									</div>

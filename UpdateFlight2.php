@@ -271,7 +271,7 @@ else{
 					<form class="form-signin" method = "post" action = "<?php $_PHP_SELF ?>">
 						<center>
 						<h3> Update No. of Passengers <h3>  <br />
-							<input type='number' id = "Name" name='Name'   placeholder="No. of Passenger" required><br />
+							<input type='number' id = "Name" name='Name' min="0" max="100"  placeholder="No. of Passenger" required><br />
 						<br/>
 						<input type='text' id = "Name1" name='Name1' placeholder="FLIGHT ID" required><br />
 						<br/>

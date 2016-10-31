@@ -35,10 +35,11 @@ else{
                die('Could not enter data: ' . mysqli_error($conn));
             }
             if ($retval->num_rows > 0) {
-            echo "<div class='table table-striped' style='margin:30px 0px;'>
+            echo "<div class='table table-striped' style='color:black;'>
+					<h2>Employee Details</h2>
 					<div class='container'>  	
 						<div class='row'>
-	    					<div class='col-sm-2 col-sm-offset-1'>
+	    					<h3><div class='col-sm-2 col-sm-offset-1'>
 								Name<br />
 							</div>
 							<div class='col-sm-2'>
@@ -59,7 +60,7 @@ else{
 							</div>
 							<div class='col-sm-1'>
 								Authority<br  />
-							</div>
+							</div></h3>
 					
 						</div>
 					</div>
@@ -85,7 +86,7 @@ else{
 				
 
 
-				echo " <div class='table table-striped' style='margin:30px 0px; color:#f23914;'>
+				echo " <div class='table table-striped' style='margin:30px 0px; color:black;'>
 					<div class='container'>  	
 						<div class='row'>
 	    					<div class='col-sm-2 col-sm-offset-1'>
@@ -123,7 +124,7 @@ else{
 						}
 				else {
 					?>
-					Invalid input<br>
+					<h2>No Details Found</h2><br>
 					<?php
 				}
             mysqli_close($conn);

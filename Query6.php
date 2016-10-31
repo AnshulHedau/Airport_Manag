@@ -73,10 +73,11 @@ else{
                die('Could not connect: ' . mysqli_error());
             }
             echo "
-				<div style='margin:30px 0px;'>
+				<div style='margin:30px 0px;color:black;'>
 					<div class='container'>  	
+						<h2>Flight Details</h2>
 						<div class='row'>
-	    					<div class='col-sm-1 col-sm-offset-1'>
+	    					<h5><div class='col-sm-1 col-sm-offset-1'>
 								Flight_ID
 							</div>
 							<div class='col-sm-1'>
@@ -105,7 +106,7 @@ else{
 							</div>
 							<div class='col-sm-1'>
 								Airlines_Name
-							</div>
+							</div></h5>
 					
 						</div>
 					</div>
@@ -202,10 +203,11 @@ else{
             }
             
             echo "
-				<div style='margin:30px 0px;'>
+				<div style='margin:30px 0px;color:black;'>
 					<div class='container'>  	
+						<h2>Flight Details</h2>
 						<div class='row'>
-	    					<div class='col-sm-1 col-sm-offset-1'>
+	    					<h5><div class='col-sm-1 col-sm-offset-1'>
 								Flight_ID
 							</div>
 							<div class='col-sm-1'>
@@ -234,7 +236,7 @@ else{
 							</div>
 							<div class='col-sm-1'>
 								Airlines_Name
-							</div>
+							</div></h5>
 					
 						</div>
 					</div>
@@ -269,7 +271,7 @@ else{
 
 
 				echo "
-				<div class='table table-striped' style='margin:30px 0px; color:#f23914;'>
+				<div class='table table-striped' style='margin:30px 0px; color:black;'>
 					<div class='container'>  	
 						<div class='row'>
 	    					<div class='col-sm-1 col-sm-offset-1'>
@@ -346,7 +348,23 @@ else{
                die('Could not enter data: ' . mysqli_error($conn));
             }
             
-            echo "Entered RETRIEVED successfully<br />";
+			
+			echo"<div class='container' style='color:black'>  	
+					<h2>Transit Details</h2><br />
+					<h3><div class='row'>
+    					<div class='col-sm-3 col-sm-offset-1'>
+							Flight_ID<br />
+						</div>
+						<div class='col-sm-2 col-sm-offset-1'>
+							Dept_Time<br />
+						</div>
+						<div class='col-sm-2 col-sm-offset-1'>
+							Passenger_Change <br />
+						</div>
+				
+					</div></h3>
+				</div>
+				";
 			while($row = mysqli_fetch_array($retval, MYSQL_ASSOC))
 			{
 				$Flight_ID = $row['FLIGHT_ID'];
@@ -357,16 +375,16 @@ else{
 
 				echo "  
 				
-				<div class='container'>  	
+				<div class='container' style='color:black'>  	
 					<div class='row'>
     					<div class='col-sm-3 col-sm-offset-1'>
-							Flight_ID: $Flight_ID<br />
+							$Flight_ID<br />
 						</div>
-						<div class='col-sm-3'>
-							Dept_Time: $Dept_Time<br />
+						<div class='col-sm-2 col-sm-offset-1'>
+							$Dept_Time<br />
 						</div>
-						<div class='col-sm-3'>
-							Passenger_Change : $Passenger_Change<br />
+						<div class='col-sm-2 col-sm-offset-1'>
+							$Passenger_Change<br />
 						</div>
 				
 					</div>
